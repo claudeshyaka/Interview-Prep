@@ -28,7 +28,7 @@ def swapNodes(indexes, queries):
     # insert child nodes and return root node
     root = insert(root, indexes)
     
-    # swap function
+    # swap function using inorder traversal
     def swap(root, k, level, l):
         if root:
             if level%k == 0:

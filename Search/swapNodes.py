@@ -1,15 +1,17 @@
+# Swap nodes
 from collections import deque
-from unittest import result
 
+# Node class
 class Node(object):
     def __init__(self, value):
         self.value = value
         self.left = None
         self.right = None
 
+# Swap tree nodes function.
 def swapNodes(indexes, queries):
-    # Write your code here
-    def create(root, indexes):
+    # Insert node in tree using level order traversal
+    def insert(root, indexes):
         q = deque([root])
         for x, y in indexes:
             temp = q.popleft()
@@ -21,9 +23,12 @@ def swapNodes(indexes, queries):
                 q.append(temp.right)
         return root
     
+    # create root node
     root = Node(1)
-    root = create(root, indexes)
+    # insert child nodes and return root node
+    root = insert(root, indexes)
     
+    # swap function
     def swap(root, k, level, l):
         if root:
             if level%k == 0:

@@ -45,7 +45,7 @@ def swapNodes(indexes, queries):
         result.append(l) 
     return result
 
-
+# Driver code
 indexes = [2, 3, -1, -1, -1, -1]
 queries = [1, 1]
 swapNodes(indexes, queries)

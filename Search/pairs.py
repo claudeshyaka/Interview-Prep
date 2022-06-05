@@ -1,8 +1,4 @@
 
-
-from attr import has
-
-
 def pairs(k, arr):
     count = 0
     # initialize dictionary for lookup
